@@ -1,25 +1,25 @@
 class Ostt < Formula
   desc "Open Speech-to-Text recording tool with real-time volume metering and transcription"
   homepage "https://github.com/kristoferlund/ostt"
-  version "0.0.25"
+  version "0.0.26"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.25/ostt-aarch64-apple-darwin.tar.gz"
-      sha256 "77038457df197da909332ab147361e9524c5a0fb26a2ddab8f5e62dae262c16e"
+      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.26/ostt-aarch64-apple-darwin.tar.gz"
+      sha256 "6be80c336d7f57a6caef324aa49f297a9104ce32d241f09d96d30de85669a066"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.25/ostt-x86_64-apple-darwin.tar.gz"
-      sha256 "c8c784251cc0ba77602d8722896d5f2bf5bc5a26569b32ff6a504601d46cd0cd"
+      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.26/ostt-x86_64-apple-darwin.tar.gz"
+      sha256 "3de7f665836f420c3e9711e06c5abca5b4954728a6a36dc116fdbd727e6b9423"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.25/ostt-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0c309f44aebb4888fdf98b1dc6953cd5e44f509eb7d02755516d64b92196244a"
+      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.26/ostt-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "2147f086b003de94349c573621433e7dc0f108c2d684371ceb62e5eac349599f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.25/ostt-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "bc4e945f87328c48fe952abdd243af363d8f9bf3a3f1b55d2ea7b0e236a7425a"
+      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.26/ostt-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "794ebc0694a86691c044aa4ce3e5a63a2a0dceb6c91d421fa2200576bbefe574"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Ostt < Formula
   end
 
   def install
-    bin.install "ostt" if OS.mac? && Hardware::CPU.arm?
-    bin.install "ostt" if OS.mac? && Hardware::CPU.intel?
-    bin.install "ostt" if OS.linux? && Hardware::CPU.arm?
-    bin.install "ostt" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "ostt"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "ostt"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "ostt"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "ostt"
+    end
 
     install_binary_aliases!
 
