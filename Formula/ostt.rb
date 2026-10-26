@@ -1,25 +1,25 @@
 class Ostt < Formula
   desc "Open Speech-to-Text recording tool with real-time volume metering and transcription"
   homepage "https://github.com/kristoferlund/ostt"
-  version "0.0.30"
+  version "0.0.31"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.30/ostt-aarch64-apple-darwin.tar.gz"
-      sha256 "a674ce19f9873bc15232b5a1738364cd6c87e1ce422f68d81342614f75c437fc"
+      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.31/ostt-aarch64-apple-darwin.tar.gz"
+      sha256 "a24668bf60d7048bfa6915205fbc02b18684bce5fd2977f166cfee0e27af43c4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.30/ostt-x86_64-apple-darwin.tar.gz"
-      sha256 "3c5f6964770e368a1d1013e5b2b8c7272d74c32dbc99b05b25b5b10a0806bc2d"
+      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.31/ostt-x86_64-apple-darwin.tar.gz"
+      sha256 "8458b4a84e6b8891d463d8bc6d32752e1c25c3ade890fc0757a03a1fdad4bf13"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.30/ostt-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ef338717859e38e2c48e953d32f0edb8b3fdfdfb9eead7af14a75f96b4234b71"
+      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.31/ostt-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "d9bcc28b4566884690cbec80d3d710e7815daee6faa05850371733d5c5e8883d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.30/ostt-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "33c96e017a8ad87faeb7cd4bde9d80841ec614cf4de5601814fd8d0131a4a891"
+      url "https://github.com/kristoferlund/ostt/releases/download/v0.0.31/ostt-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "aec2c391fcacd0ea2572a2f269508aacdea973f150f63ca69257c586188212c5"
     end
   end
   license "MIT"
